@@ -6,4 +6,3 @@ Task 1: Create a Maven project and add required dependency of spring-context 5.1
 
 3.Using ApplicationContext Create a spring-xml-demo repo and push the code to master branch.
 
-                                     SpringTask1Annotation
