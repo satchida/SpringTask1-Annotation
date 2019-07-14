@@ -4,9 +4,12 @@ package com.stackroute;
 import com.stackroute.domain.Actor;
 import com.stackroute.domain.Movie;
 import org.springframework.context.annotation.Bean;
+
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+@ComponentScan(basePackages = "com.stackroute")
 public class AppConfig {
 
     @Bean
@@ -23,12 +26,18 @@ public class AppConfig {
         return actor2;
     }
 
-    @Bean({"MovieA","MovieB"})
-    public Movie movieCharacters(){
+    @Bean
+    public Actor actor3(){
 
-        Movie movie=new Movie(actor1(),actor2());
-
-        return movie;
+        Actor actor3=new Actor("Ranjit","Male",34);
+        return actor3;
     }
+
+    @Bean
+    public Movie movie(){
+       return new Movie(actor1(),actor2(),actor3());
+  }
+
+
 
 }
