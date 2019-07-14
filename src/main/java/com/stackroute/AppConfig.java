@@ -9,7 +9,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = "com.stackroute")
 public class AppConfig {
 
     @Bean
@@ -36,6 +35,11 @@ public class AppConfig {
     @Bean
     public Movie movie(){
        return new Movie(actor1(),actor2(),actor3());
+  }
+  @Bean
+    public BeanLifecycleDemoBean beanLifecycleDemoBean()
+  {
+      return new BeanLifecycleDemoBean();
   }
 
 
