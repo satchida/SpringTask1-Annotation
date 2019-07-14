@@ -41,7 +41,12 @@ public class AppConfig {
   {
       return new BeanLifecycleDemoBean();
   }
-
+    @Bean
+    public com.stackroute.demo.BeanPostProcessorDemoBean beanPostProcessorDemoBean()
+    {
+        com.stackroute.demo.BeanPostProcessorDemoBean beanPostProcessorDemoBean=new com.stackroute.demo.BeanPostProcessorDemoBean();
+        return beanPostProcessorDemoBean;
+    }
 
 
 }
